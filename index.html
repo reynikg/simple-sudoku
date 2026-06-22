@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Sudoku</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Sudoku</h1>
+    <div id="message"></div>
+
+    <div class="game-layout">
+        <div class="left-column">
+            <div class="best-time-panel">
+                <div class="best-time-label">Best Time</div>
+                <div id="best-time" class="best-time-display">--:--.--</div>
+            </div>
+        </div>
+
+        <div id="sudoku-board" class="board"></div>
+
+        <div class="right-column">
+            <div id="number-tracker" class="tracker"></div>
+            <div id="timer" class="timer-display">00:00.00</div>
+
+            <div class="controls">
+                <button onclick="checkBoard()">Check Solution</button>
+                <button class="secondary" onclick="resetBoard()">Reset Puzzle</button>
+                <button class="secondary" onclick="startNewGame()">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="version-badge">v.1.9-stable(04062026)</div>
+
+    <script src="game.js" defer></script>
+</body>
+</html>
