@@ -40,8 +40,13 @@
 </head>
 <body>
 
-    <h1>Sudoku</h1>
-    <div id="message"></div>
+    <header class="masthead">
+        <h1>Sudoku</h1>
+        <p class="kicker">Nine by Nine</p>
+        <div class="meander" aria-hidden="true"></div>
+    </header>
+
+    <div id="message" role="status" aria-live="polite"></div>
 
     <div class="game-layout">
         <div class="left-column">
@@ -51,7 +56,9 @@
             </div>
         </div>
 
-        <div id="sudoku-board" class="board"></div>
+        <div class="board-frame">
+            <div id="sudoku-board" class="board"></div>
+        </div>
 
         <div class="right-column">
             <div id="number-tracker" class="tracker"></div>
@@ -65,7 +72,7 @@
         </div>
     </div>
 
-    <div class="version-badge">v.1.9-stable(04062026)</div>
+    <div class="version-badge">v.2.0-stable(04062026)</div>
 
     <script src="game.js" defer></script>
 </body>
